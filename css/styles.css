@@ -511,19 +511,19 @@ img {
 }
 
 .icon-features-first::before {
-    background-image: url("../svg/antenna1.svg");
+    background-image: url("../images/antenna1.svg");
 }
 
 .icon-features-second::before {
-    background-image: url("../svg/clock2.svg");
+    background-image: url("../images/clock2.svg");
 }
 
 .icon-features-third::before {
-    background-image: url("../svg/diagram3.svg");
+    background-image: url("../images/diagram3.svg");
 }
 
 .icon-features-fourth::before {
-    background-image: url("../svg/astronaut4.svg");
+    background-image: url("../images/astronaut4.svg");
 }
 
 /* ____________________________________________________________________________ */
