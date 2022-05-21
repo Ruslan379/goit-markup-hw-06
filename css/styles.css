@@ -224,7 +224,8 @@ img {
 }
 
 .header-link-icon {
-    margin-right: 10px;}
+    margin-right: 10px;
+}
 
 
 
@@ -390,43 +391,46 @@ img {
 }
 
 .backdrop.is-hidden .modal {
+    /* ==== Анимирование Модалки через opacity ===== */
     opacity: 0;
 
+/* == Анимирование Модалки через transform-снизу == */
     /* transform: translate(-50%, 50%); */
 
-    /* transform: scale(0); */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    
-    
+/* == Анимирование Модалки через transform-scal===== */
+    transform: translate(-50%, -50%) scale(0.5);
+
 }
 
 .modal {
     position: absolute;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    
     width: 528px;
     min-height: 581px;
     padding: 15px;
 
     background-color: #fff;
 
-    /* transform: scale(1); */
-    /* transform: translate(-50%, -50%), scale(1); */
-    /* transform: translate(-50%, -50%); */
-    /* transform: translate(-50%, -50%); */
 
+/* ============== Анимирование Модалки через opacity =============== */
     opacity: 1;
-    transition-property: opacity;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+/* __________________________________________________________________ */
 
-    /* transition-property: transform; */
+/* =========== Анимирование Модалки через transform-снизу ============ */
+    
+    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+/* ___________________________________________________________________ */
 
-    transition-duration: 250ms;
-    /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-    transition-timing-function: linear;
+/* =========== Анимирование Модалки через transform-scale ============ */
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+/* ___________________________________________________________________ */
+
 }
 /* ================ Кнопка ЗАКРЫТЬ модалку ================= */
 .modal-icon-box {
@@ -436,7 +440,6 @@ img {
 
     width: 30px;
     height: 30px;
-
 }
 
 .button-modal {
@@ -453,12 +456,8 @@ img {
     border-radius: 50%;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-
     /* outline: 2px solid tomato;  */
 }
-
-
-
 
 /* _________________________  К О Н Е Ц   Блок-секции_1 ГЕРОЙ (hero) _________________________ */
 
