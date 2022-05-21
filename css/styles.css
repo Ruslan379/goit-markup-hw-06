@@ -372,15 +372,20 @@ img {
 /* ========================= Модалка ============================== */
 .backdrop {
     position: fixed;
+
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    
-    background-color: var(--color-background-backdrop);
-    z-index: 1
 
+    top: 0;
+    left: 0;
+    /* left: 50%; */
+    /* transform: translate(-50%, 0%); */
+
+    background-color: var(--color-background-backdrop);
+
+    opacity: 1;
+    
+    z-index: 1
     }
 
 
@@ -398,7 +403,7 @@ img {
     /* transform: translate(-50%, 50%); */
 
 /* == Анимирование Модалки через transform-scal===== */
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(1.1);
 
 }
 
