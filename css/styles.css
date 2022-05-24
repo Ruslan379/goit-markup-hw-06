@@ -1071,7 +1071,7 @@ img {
     
 }
 
-/* ======================== Стилизация блока ПОДПИСАТЬСЯ ======================== */
+/* ======================== Стилизация формы ПОДПИСАТЬСЯ ======================== */
 .footers-subscription {
     margin-left: 93px;
     padding-top: 12px;
@@ -1096,6 +1096,7 @@ img {
     
         color: var(--color-font-footer);
 }
+/* +++++++++++++++++++++++++++++++++ */
 
 .footers-input {
     width: 358px;
@@ -1116,9 +1117,6 @@ img {
 
 }
 
-.footers-label {
-
-} 
 
 .btn-footers.hero-button {
     position: relative;
@@ -1127,21 +1125,20 @@ img {
     text-align: left;
 }
 
-.footers-field {
-    position: relative;
+
+.btn-footers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 
 .footers-icon {
-    position: absolute;
-    
-    right: 28px;
-    /* top: 45px; */
+    margin-left: 10px;
 
     fill: var(--color-light);
 }
-
-
 /* ____________________________  К О Н Е Ц  footer ______________________________________ */
 
 
