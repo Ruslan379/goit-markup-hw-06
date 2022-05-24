@@ -2,6 +2,7 @@
     /* ============ ПЕРЕМЕННЫЕ ЦВЕТА ============ */
     --color-font-main: #212121;
     --color-font-head: #757575;
+    --color-font-placeholder-modal: rgba(117, 117, 117, 0.5);
     --color-font-footer: rgba(255, 255, 255, 0.6);
     /* =============================== */
     --color-background-another: #E5E5E5;
@@ -18,6 +19,7 @@
     --color-border-line: #ECECEC;
     --color-borders-portfolio: #EEEEEE;
     --color-border-clients: #AFB1B8;
+    --color-border-modal: rgba(33, 33, 33, 0.2);
     /* =============================== */
     --color-logo-links-hover: #2196F3;
     --color-button-hover: #188CE8;
@@ -434,7 +436,7 @@ img {
 /* ___________________________________________________________________ */
 }
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ====================== Разметка формы ============================== */
 .modal-title {
     font-weight: 700;
     font-size: 20px;
@@ -446,12 +448,13 @@ img {
     color: var(--color-font-main);
 }
 
-
-.form-label {
+/* ++++++++++++++++ Мой вариант ()+++++++++++++++++++++++++++ */
+/* .form-label {
     display: flex;
     flex-direction: column;
     
 }
+
 
 .label-text {
     margin-bottom: 4px;
@@ -468,16 +471,12 @@ img {
     width: 100%;
     height: 40px;
 
-    /* font-size: 14px; */
-    /* outline: none; */
-
     margin-bottom: 10px;
     padding-left: 40px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
-    /* border: 1px solid rgba(235, 2, 2, 0.2); */
     border-radius: 4px;
-
+    outline: none;
 }
 
 .form-field {
@@ -493,35 +492,147 @@ img {
 
 .form-input:focus {
     border-color: var(--color-logo-links-hover);
-    /* border: 1px solid rgb(5, 21, 243); */
 }
 
 .form-input:focus + .form-icon {
     fill: var(--color-logo-links-hover);
+} */
+/* ____________________ Мой вариант ()____________________ */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.modal-input {
+    width: 100%;
+    height: 40px;
+
+    padding-left: 35px;
+
+    border: 1px solid var(--color-border-modal);
+    border-radius: 4px;
+
+    outline: none;
 }
 
+
+.modal-field:nth-child(-n + 3) {
+    margin-bottom: 10px;
+
+    /* outline: 2px solid tomato; */
+}
+
+
+.modal-label {
+    display: block;
+
+    margin-bottom: 4px;
+    
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: var(--color-font-head);
+
+}
+
+.modal-text {
+    width: 100%;
+    height: 120px;
+
+    padding: 12px 16px;
+
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: var(--color-font-placeholder-modal);
+
+    border: 1px solid var(--color-border-modal);
+    border-radius: 4px;
+
+    resize: none;
+    margin-bottom: 20px;
+}
+
+.modal-field-wrap {
+    position: relative;
+}
+
+.modal-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-input:focus {
+    border-color: var(--color-logo-links-hover);
+}
+
+.modal-input:focus +.modal-icon {
+    fill: var(--color-logo-links-hover);
+}
+
+/* ________________________________________________ */
+.check-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-icon {
+    fill: transparent;
+}
+
+.check-text .check-icon {
+    display: flex;
+    
+    width: 16px;
+    height: 15px;
+
+    margin-right: 8px;
+
+    border: 2px solid var(--color-font-main);
+    border-radius: 3px;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-check:checked+.check-text .check-icon {
+    background-color: var(--color-logo-links-hover);
+    border: none;
+    fill: #ffffff;
+}
+
+/* .modal-check:checked+.check-text .check-icon {
+    fill: #ffffff;
+} */
+
+.agreement {
+    line-height: 1.71;
+
+    color: var(--color-font-head);
+}
+
+.agreement .submit {
+
+    color: var(--color-logo-links-hover);
+}
+
+
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-
-
-
-
-
-
-
-
-
-
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ================ Кнопка ОТПРАВИТЬ в модалке ================= */
 .hero-button.btn-modal {
     display: block;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    /* text-align: center; */
+
+    
 }
-
-
 
 /* ================ Кнопка ЗАКРЫТЬ модалку ================= */
 .modal-icon-box {
@@ -545,9 +656,12 @@ img {
     fill: var(--color-dark);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    /* outline: 2px solid tomato;  */
+.button-modal:hover {
+    fill: var(--color-logo-links-hover);
 }
 
 /* _________________________  К О Н Е Ц   Блок-секции_1 ГЕРОЙ (hero) _________________________ */
