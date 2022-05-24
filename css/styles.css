@@ -436,7 +436,7 @@ img {
 /* ___________________________________________________________________ */
 }
 
-/* ====================== Разметка формы ============================== */
+/* ====================== Стилизация ФОРМЫ ============================== */
 .modal-title {
     font-weight: 700;
     font-size: 20px;
@@ -448,59 +448,7 @@ img {
     color: var(--color-font-main);
 }
 
-/* ++++++++++++++++ Мой вариант ()+++++++++++++++++++++++++++ */
-/* .form-label {
-    display: flex;
-    flex-direction: column;
-    
-}
 
-
-.label-text {
-    margin-bottom: 4px;
-
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    
-    color: var(--color-font-head);
-}
-
-
-.form-input {
-    width: 100%;
-    height: 40px;
-
-    margin-bottom: 10px;
-    padding-left: 40px;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    outline: none;
-}
-
-.form-field {
-    position: relative;
-}
-
-.form-icon {
-    position: absolute;
-    left: 12px;
-    top: 11px;
-    transform: translateY(100%);
-}
-
-.form-input:focus {
-    border-color: var(--color-logo-links-hover);
-}
-
-.form-input:focus + .form-icon {
-    fill: var(--color-logo-links-hover);
-} */
-/* ____________________ Мой вариант ()____________________ */
-
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .modal-input {
     width: 100%;
     height: 40px;
@@ -511,6 +459,15 @@ img {
     border-radius: 4px;
 
     outline: none;
+}
+
+/* +++++++++++ Стили ПЛЕЙСХОЛДЕРА +++++++++++ */
+.modal-text::placeholder {
+    
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: var(--color-font-placeholder-modal);
 }
 
 
@@ -531,7 +488,7 @@ img {
     letter-spacing: 0.01em;
 
     color: var(--color-font-head);
-
+    
 }
 
 .modal-text {
@@ -539,18 +496,19 @@ img {
     height: 120px;
 
     padding: 12px 16px;
+    margin-bottom: 20px;
 
-    font-size: 12px;
-    line-height: 14px;
+    line-height: 1.14;
     letter-spacing: 0.01em;
 
-    color: var(--color-font-placeholder-modal);
+    color: var(--color-font-main);
 
     border: 1px solid var(--color-border-modal);
     border-radius: 4px;
 
     resize: none;
-    margin-bottom: 20px;
+    outline: none;
+    
 }
 
 .modal-field-wrap {
@@ -564,15 +522,16 @@ img {
     transform: translateY(-50%);
 }
 
-.modal-input:focus {
+.modal-input:focus,
+.modal-text:focus {
     border-color: var(--color-logo-links-hover);
 }
 
 .modal-input:focus +.modal-icon {
     fill: var(--color-logo-links-hover);
 }
-
 /* ________________________________________________ */
+
 .check-text {
     display: flex;
     align-items: center;
@@ -620,9 +579,8 @@ img {
     color: var(--color-logo-links-hover);
 }
 
+/* _________________________________________________________ */
 
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ================ Кнопка ОТПРАВИТЬ в модалке ================= */
 .hero-button.btn-modal {
@@ -630,8 +588,6 @@ img {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-
-    
 }
 
 /* ================ Кнопка ЗАКРЫТЬ модалку ================= */
@@ -1133,6 +1089,14 @@ img {
     /* outline: 2px solid rgb(71, 58, 250); */
 }
 
+/* +++++++++++ Стили ПЛЕЙСХОЛДЕРА +++++++++++ */
+.footers-input::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+    
+        color: var(--color-font-footer);
+}
+
 .footers-input {
     width: 358px;
     height: 50px;
@@ -1144,7 +1108,7 @@ img {
     font-size: 16px;
     line-height: 1.25;
 
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-light);
     background-color: var(--color-background-footer);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
